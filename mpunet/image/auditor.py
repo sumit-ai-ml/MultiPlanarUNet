@@ -16,7 +16,7 @@ def _audit_classes(nii_lab_paths, logger):
                                  replace=False)
     classes = []
     for l in lab_paths:
-        classes.extend(np.unique(nib.load(l).get_data()))
+        classes.extend(np.unique(nib.load(l).get_fdata()))
     classes = np.unique(classes)
     n_classes = classes.shape[0]
 
@@ -236,7 +236,7 @@ class Auditor(object):
             pixdims.append(get_pix_dim(im))
 
             # Calculate memory in bytes to store image
-            memory.append(im.get_data_dtype().itemsize * np.prod(shape))
+            memory.append(im.get_fdata_dtype().itemsize * np.prod(shape))
 
         n_classes = None
         if self.nii_lab_paths is not None:
