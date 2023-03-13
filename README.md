@@ -25,7 +25,7 @@ The Multi-Planar U-Net as implemented here was also used in the following contex
 
 ```
 # From GitHub
-git clone https://github.com/perslev/MultiPlanarUNet
+git clone https://github.com/sumit-ai-ml/MultiPlanarUNet.git
 pip install -e MultiPlanarUNet
 ```
 
